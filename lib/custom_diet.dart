@@ -5,11 +5,12 @@ import 'model/dietmodel.dart';
 
 class CustomDiet extends StatelessWidget {
   final List<DietModel> diets;
+
   const CustomDiet({super.key, required this.diets});
 
   @override
   Widget build(BuildContext context) {
-    return   SizedBox(
+    return SizedBox(
       height: 240,
       child: ListView.separated(
         itemBuilder: (context, index) {
@@ -43,6 +44,16 @@ class CustomDiet extends StatelessWidget {
                 Container(
                   height: 45,
                   width: 130,
+                  decoration: BoxDecoration(
+                      gradient: LinearGradient(colors: [
+                        diets[index].viewIsSelected
+                            ? const Color(0xff9DCEFF)
+                            : Colors.transparent,
+                        diets[index].viewIsSelected
+                            ? const Color(0xff92A3FD)
+                            : Colors.transparent
+                      ]),
+                      borderRadius: BorderRadius.circular(50)),
                   child: Center(
                     child: Text(
                       'View',
@@ -54,16 +65,6 @@ class CustomDiet extends StatelessWidget {
                           fontSize: 14),
                     ),
                   ),
-                  decoration: BoxDecoration(
-                      gradient: LinearGradient(colors: [
-                        diets[index].viewIsSelected
-                            ? const Color(0xff9DCEFF)
-                            : Colors.transparent,
-                        diets[index].viewIsSelected
-                            ? const Color(0xff92A3FD)
-                            : Colors.transparent
-                      ]),
-                      borderRadius: BorderRadius.circular(50)),
                 )
               ],
             ),
