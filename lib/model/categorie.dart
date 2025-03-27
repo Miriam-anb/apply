@@ -23,7 +23,7 @@ class CategoryModel {
         boxColor: Color(0xffC58BF2),
       ),
       CategoryModel(
-        name: 'Pie',
+        name: 'Pies',
         iconPath: 'assets/icons/pie.svg',
         boxColor: Color(0xff92A3FD),
       ),

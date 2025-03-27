@@ -32,11 +32,7 @@ class CustomDiet extends StatelessWidget {
                           fontSize: 16),
                     ),
                     Text(
-                      diets[index].level +
-                          ' | ' +
-                          diets[index].duration +
-                          ' | ' +
-                          diets[index].calorie,
+                      '${diets[index].level} | ${diets[index].duration} | ${diets[index].calorie}',
                       style: const TextStyle(
                           color: Color(0xff7B6F72),
                           fontSize: 13,

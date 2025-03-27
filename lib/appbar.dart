@@ -8,7 +8,7 @@ class Appbar extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppBar(
       title: const Text(
-        'Breakfast',
+        'Good FastFood',
         style: TextStyle(
             color: Colors.black, fontSize: 18, fontWeight: FontWeight.bold),
       ),
